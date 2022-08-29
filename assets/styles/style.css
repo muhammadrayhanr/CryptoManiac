@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+* {
+   font-family: 'Roboto Slab', sans-serif;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+    background-color: #19191f;
+    color: white;
+ }
+
+.profile header {
+   text-align: center;
+}
+
+.profile table {
+   text-align: left;
+}
+
+.profile table th {
+   border-left: solid 2px rgb(211, 86, 8);
+   padding-left: 7px;
+}
+
+.profile table td {
+   padding-left: 10px;
+}
+
+.featured-image {
+   width: 100%;
+   max-height: 300px;
+   object-fit: cover;
+   object-position: center;
+}
+
+#Mekanisme .featured-image {
+   width: 100%;
+   max-height: 800px;
+   object-fit: cover;
+   object-position: center;
+}
+
+.profile img {
+   width: 150px;
+}
+
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.95);
+   background-color: #24252A;
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Header */
+
+li, a, button {
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   color: #edf0f1;
+   text-decoration: none;
+}
+
+#header-main {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 10%;   
+   background-color: #24252A; 
+}
+
+.logo {
+   width: 40px;
+   cursor: pointer;
+}
+
+.nav_links {
+   list-style: none;
+}
+
+.nav_links li {
+   display: inline-block;
+   padding: 0px 20px;
+}
+
+.nav_links li a {
+   transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+   color: rgb(211, 86, 8)
+}
+
+.menu {
+   display: none;
+}
+
+button {
+   padding: 9px 25px;
+   background-color: rgb(211, 86, 8);
+   border: none;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
+}
+
+button:hover {
+   background-color: rgb(174, 78, 18);
+}
+
+@media only screen and (max-width: 800px) {
+   .nav_links, .cta {
+       display: none;
+   }
+   .menu {
+       display: inherit;
+   }
+}
+
+/* Mobile Nav */
+
+.overlay {
+   height: 50%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   background-color: #24252A;
+   overflow-x: hidden;
+   transition: all 0.5s ease 0s;
+}
+
+.overlay_content {
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.overlay a {
+   padding: 15px;
+   font-size: 36px;
+   display: block;
+   transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover, .overlay a:focus {
+   color: rgb(211, 86, 8);
+}
+.overlay .close {
+   position: absolute;
+   top: 20px;
+   right: 45px;
+   font-size: 60px;
+}
+
+#mobile_menu a:hover {
+   color: rgb(211, 86, 8);
+}
+
+@media screen and (max-height: 450px) {
+   .overlay a {
+       font-size: 20px
+   }
+   .overlay .close {
+       font-size: 40px;
+       top: 15px;
+       right: 35px
+   }
+}
+
+/* Banner */
+
+.banner {
+   padding: 185px 0 185px 0;
+   background-image: url(../image/banner1.jpg);
+   height: 300px;
+   background-size: cover;
+   color: rgb(235, 220, 220);
+   text-align: center;
+   animation: slide 20s infinite;
+   /* margin: 70px auto; */
+   margin: 0 auto;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   }  
+ 
+ .banner h1 {
+   opacity: 0.6;
+   color: rgb(247, 239, 239);
+   font-size: 40px;
+   letter-spacing: 5px;
+   margin-bottom: 10px;
+   }  
+
+ .banner span {
+   color: #ff8401;
+   font-size: 50px;
+ }
+
+ .banner h3 {
+   opacity: 0.8;
+   color: rgb(255, 255, 255);
+ }
+
+ @keyframes slide {
+   50% {
+     background-image: url(../image/banner2.jpg);
+     }
+ 
+   100% {
+     background-image: url(../image/banner1.jpg);
+     }
+   }  
+
+/* Main */
+
+main {
+   padding: 20px;
+   overflow: auto;
+}
+
+main img {
+   padding: 15px 0;
+}
+
+main h2 {
+   color: rgb(248, 101, 9);
+   padding: 10px 0;
+}
+
+main h3 {
+   color: rgb(248, 101, 9);
+   padding: 20px 0 10px 0;
+}
+
+#contoh {
+   font-family: Arial, Helvetica, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+   margin-top: 15px;
+ }
+ 
+ #contoh td, #contoh th {
+   border: 1px solid rgb(32, 23, 23);
+   padding: 8px;
+   text-align: center;
+ }
+ 
+ 
+ #contoh th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   background-color: rgb(248, 101, 9);
+   color: white;
+ }
+
+#content {
+   float: left;
+   width: 75%;
+}
+
+#content p {
+   padding: 0 0 5px 0;
+}
+
+aside {
+   float: right;
+   width: 25%;
+   padding-left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+   #content,
+   aside {
+       width: 100%;
+       padding: 0;
+   }
+}
+
+/* Footer */
+
+footer {
+   background-color: #24252A;
+   text-align: center;
+   height: 40px;
+}
+
+footer p {
+   padding: 10px;
+}
